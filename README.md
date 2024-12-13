@@ -13,6 +13,7 @@ This turborepo includes the following packages/apps:
 
 ### Apps and Packages
 
+- `api`: a [Hono](https://hono.dev/) app
 - `web`: a [Next.js](https://nextjs.org/) app
 - `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `@repo/database`: [Prisma](https://prisma.io/) ORM wrapper to manage & access your database
