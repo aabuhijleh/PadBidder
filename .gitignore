@@ -37,3 +37,6 @@ dist
 
 # nvm
 .nvmrc
+
+# environment variables
+.env

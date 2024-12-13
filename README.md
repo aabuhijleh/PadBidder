@@ -6,7 +6,6 @@ Before you begin, ensure you have the following installed:
 
 - [Node.js](https://nodejs.org/en/download/) (>=18)
 - [pnpm](https://pnpm.io/installation)
-- [Docker](https://docs.docker.com/get-docker/)
 
 ## What's inside?
 
@@ -29,28 +28,23 @@ This turborepo has some additional tools already setup for you:
 - [ESLint](https://eslint.org/) for code linting
 - [Prettier](https://prettier.io) for code formatting
 - [Prisma](https://prisma.io/) for database ORM
-- [Docker Compose](https://docs.docker.com/compose/) for local database
 
 ### Database
 
-We use [Prisma](https://prisma.io/) to manage & access our database. As such you will need a database for this project, either locally or hosted in the cloud.
+We use [Prisma](https://prisma.io/) to manage & access our database. The project is configured to use [Neon](https://neon.tech/) as the database provider, which offers a serverless Postgres database optimized for Prisma.
 
-To make this process easier, we offer a [`docker-compose.yml`](https://docs.docker.com/compose/) file to deploy a MySQL server locally with a new database named `turborepo` (To change this update the `MYSQL_DATABASE` environment variable in the `docker-compose.yml` file):
+To get started, you will need to:
 
-```bash
-cd my-turborepo
-docker-compose up -d
-```
+1. Create a Neon project and get your database connection string
+2. Copy the `.env.example` file to `.env`
 
-Once deployed you will need to copy the `.env.example` file to `.env` in order for Prisma to have a `DATABASE_URL` environment variable to access.
+   ```bash
+   cp packages/database/.env.example packages/database/.env
+   ```
 
-```bash
-cp .env.example .env
-```
+3. Update the `DATABASE_URL` in your `.env` with your Neon connection string
 
-If you added a custom database name, or use a cloud based database, you will need to update the `DATABASE_URL` in your `.env` accordingly.
-
-Once deployed & up & running, you will need to create & deploy migrations to your database to add the necessary tables. This can be done using [Prisma Migrate](https://www.prisma.io/migrate):
+   Once configured, you can create & deploy migrations to your database using [Prisma Migrate](https://www.prisma.io/migrate):
 
 ```bash
 pnpm prisma migrate dev
