@@ -4,6 +4,11 @@ import type { AppType } from "api/src";
 export const client = hc<AppType>(process.env.NEXT_PUBLIC_API_URL as string);
 
 export const getUsers = async () => {
-  const res = await client.users.$get();
-  return res.json();
+  try {
+    const res = await client.users.$get();
+    return res.json();
+  } catch (error) {
+    console.error("Could not fetch users", error);
+    return [];
+  }
 };
