@@ -40,7 +40,7 @@ To get started, you will need to:
 2. Copy the `.env.example` file to `.env`
 
    ```bash
-   cp .env.example .env
+   cp packages/database/.env.example packages/database/.env
    ```
 
 3. Update the `DATABASE_URL` in your `.env` with your Neon connection string
