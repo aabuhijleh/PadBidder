@@ -4,6 +4,8 @@
   "exports": {
     ".": "./src/client.ts"
   },
+  "types": "dist/client.d.ts",
+  "main": "dist/client.js",
   "scripts": {
     "db:migrate:deploy": "prisma migrate deploy",
     "db:migrate:dev": "prisma migrate dev",
@@ -13,9 +15,10 @@
     "format": "prisma format",
     "generate": "prisma generate",
     "lint": "eslint . --max-warnings 0",
-    "prebuild": "npm run generate",
-    "predev": "npm run generate",
-    "studio": "prisma studio"
+    "prebuild": "pnpm generate",
+    "predev": "pnpm generate",
+    "studio": "prisma studio",
+    "build": "tsc"
   },
   "dependencies": {
     "@prisma/client": "^5.10.2"

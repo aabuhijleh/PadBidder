@@ -4,7 +4,7 @@ import { cors } from "hono/cors";
 import { config } from "dotenv-safe";
 config();
 
-import { userRoute } from "#routes/userRoute.js";
+import { userRoute } from "./routes/userRoute";
 
 const app = new Hono();
 
@@ -23,6 +23,6 @@ serve({
   port,
 });
 
-console.log(`🦊 API server is running on port: ${port}`);
+console.log(`🦊 API server is running on port: http://localhost:${port}`);
 
 export type AppType = typeof route;
