@@ -1,0 +1,25 @@
+{
+  "name": "api",
+  "type": "module",
+  "imports": {
+    "#*": "./src/*"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.7",
+    "@hono/zod-validator": "^0.4.2",
+    "@repo/database": "workspace:*",
+    "dotenv-safe": "^9.1.0",
+    "hono": "^4.6.13",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/dotenv-safe": "^8.1.6",
+    "@types/node": "^20.11.17",
+    "tsx": "^4.7.1",
+    "typescript": "^5.7.2"
+  }
+}

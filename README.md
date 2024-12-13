@@ -1,14 +1,12 @@
-# Turborepo starter
+# PalBidder
 
-This is an official starter turborepo.
+## Prerequisites
 
-## Using this example
+Before you begin, ensure you have the following installed:
 
-Run the following command:
-
-```sh
-npx create-turbo@latest -e with-prisma
-```
+- [Node.js](https://nodejs.org/en/download/) (>=18)
+- [pnpm](https://pnpm.io/installation)
+- [Docker](https://docs.docker.com/get-docker/)
 
 ## What's inside?
 
@@ -55,17 +53,17 @@ If you added a custom database name, or use a cloud based database, you will nee
 Once deployed & up & running, you will need to create & deploy migrations to your database to add the necessary tables. This can be done using [Prisma Migrate](https://www.prisma.io/migrate):
 
 ```bash
-npx prisma migrate dev
+pnpm prisma migrate dev
 ```
 
 If you need to push any existing migrations to the database, you can use either the Prisma db push or the Prisma migrate deploy command(s):
 
 ```bash
-yarn run db:push
+pnpm db:push
 
 # OR
 
-yarn run db:migrate:deploy
+pnpm db:migrate:deploy
 ```
 
 There is slight difference between the two commands & [Prisma offers a breakdown on which command is best to use](https://www.prisma.io/docs/concepts/components/prisma-migrate/db-push#choosing-db-push-or-prisma-migrate).
@@ -77,7 +75,7 @@ To do this update check the seed script located in `packages/database/src/seed.t
 Once edited run the following command to run tell Prisma to run the seed script defined in the Prisma configuration:
 
 ```bash
-yarn run db:seed
+pnpm db:seed
 ```
 
 For further more information on migrations, seeding & more, we recommend reading through the [Prisma Documentation](https://www.prisma.io/docs/).
@@ -87,7 +85,7 @@ For further more information on migrations, seeding & more, we recommend reading
 To build all apps and packages, run the following command:
 
 ```bash
-yarn run build
+pnpm build
 ```
 
 ### Develop
@@ -95,7 +93,7 @@ yarn run build
 To develop all apps and packages, run the following command:
 
 ```bash
-yarn run dev
+pnpm dev
 ```
 
 ## Useful Links

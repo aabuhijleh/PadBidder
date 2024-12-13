@@ -23,7 +23,7 @@
   "engines": {
     "node": ">=18"
   },
-  "name": "with-prisma",
+  "name": "pal-bidder",
   "dependencies": {
     "@prisma/client": "5.10.2"
   },
