@@ -4,9 +4,11 @@
   "imports": {
     "#*": "./src/*"
   },
+  "main": "./dist/index.js",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "start": "node ."
   },
   "dependencies": {
     "@hono/node-server": "^1.13.7",
