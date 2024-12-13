@@ -16,7 +16,7 @@ const route = app
   })
   .route("/users", userRoute);
 
-const port = parseInt(process.env.PORT as string);
+const port = parseInt(process.env.API_PORT as string);
 
 serve({
   fetch: route.fetch,
