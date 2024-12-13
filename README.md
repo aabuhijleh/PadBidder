@@ -39,7 +39,7 @@ To get started, you will need to:
 2. Copy the `.env.example` file to `.env`
 
    ```bash
-   cp packages/database/.env.example packages/database/.env
+   cp .env.example .env
    ```
 
 3. Update the `DATABASE_URL` in your `.env` with your Neon connection string
@@ -75,6 +75,8 @@ pnpm db:seed
 For further more information on migrations, seeding & more, we recommend reading through the [Prisma Documentation](https://www.prisma.io/docs/).
 
 ### Build
+
+Add `.env` file to both `apps/web` and `apps/api` based on their `.env.example` file.
 
 To build all apps and packages, run the following command:
 
